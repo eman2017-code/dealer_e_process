@@ -1,0 +1,47 @@
+/**
+ * FOR THE FOLLOWING CODE AND THE CLASSES FROM class-questions.txt
+ * - Identify any/all errors, warnings, or invalid code, and possible fixes
+ * 
+- If you have an unknown $sides array, how could you ensure that your code 
+ *   does not throw an invalid argument exception when creating a shape?
+
+ */
+
+    $four = array(3, 4, 3, 4);
+
+    $three = array('first' => 2, 'second' => 3, 'third' => 6);
+
+
+
+    $shape = new Shape($four);
+    echo '$shape has a perimeter of '.$shape->perimeter();
+
+
+
+    // this block of code would not comple correctly
+    // a rectangle has 4 sides. To calculate the perimeter of a quadralateral
+    // you must add each side up.
+
+    //RECOMENDATION: $rectangle = new Rectangle($four)
+    $rectangle = new Rectangle($three);
+    echo "$rectangle has an perimeter of ".$rectangle->perimeter();
+
+
+
+    $rectangle = new Rectangle($four);
+    echo "$rectangle has an area of ".$rectangle->area();
+
+
+
+    $square = new Square($four);
+    echo "$square has an area of ".$square->area();
+
+
+
+    $triangle = new Triangle($three);
+    echo '$triangle has a perimeter of '.$triangle->perimeter();
+
+
+
+    echo 'the name of $triangle is "'.$triangle->name.'" and the ('.$triangle->side_count.') sides are : ';
+    print_r($triangle->sides);
